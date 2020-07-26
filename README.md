@@ -4,19 +4,19 @@ O intuito deste projeto é o teste das habilidades do profissional em desenvolve
 O projeto em si é constituido por uma API Restful Serverless3 para o cadastro, alteração e remoção de lojas e produtos de uma determinada empresa.
 
 ## Instalação
-A instalação do projeto no Lambda Functions e a configuração do API Gateway é realizada através do Amplify.
-Finalizada a configuração, substituir o conteúdo da pasta ```src/``` gerada pelo conteúdo deste repositório.
+A instalação do projeto no Lambda Functions e a configuração do API Gateway é realizada através do Amplify CLI.
+Finalizada a configuração, substituir o conteúdo da pasta ```src/``` gerada pelo conteúdo da mesma pasta deste repositório.
 Para mais detalhes, seguir a documentação:
 Amplify CLI[https://docs.amplify.aws/cli]
 
-Para fins de testesUtilizar o npm para realizar a instalação dos módulos da aplicação referenciadas no ```package.json``` dentro da pasta ```src/```.
+Para fins de testes locais poderá ser instaladas as depêndencias dos módulos da aplicação referenciadas no ```package.json``` via ```npm```.
 
 ```bash
 npm install
 ```
 
 ## Execução
-Executar a aplicação encontrada na pasta ```src/```.
+Para executar a aplicação localmente, basta acionar a aplicação encontrada na pasta ```src/```.
 
 ```bash
 node app.js
