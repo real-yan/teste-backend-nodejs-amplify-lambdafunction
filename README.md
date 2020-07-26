@@ -28,34 +28,41 @@ Por padrão, a execução é realizada na porta ```3000```, mas essa informaçã
 A API é disponibilizada atrvés dos seguintes endpoints:
 
 Endpoint para cadastrar uma nova loja.
-```POST /lojas/adicionar```
-```Body: {
-  "nome": String (Obrigatório),
-  "matriz": Boolean,
-  "cnpj": String (Obrigatório),
-  "inscrestadual": String,
-  "inscrmunicipal": String,
-  "rua": String (Obrigatório),
-  "numero": Integer (Obrigatório),
-  "bairro": String (Obrigatório),
-  "complemento": String,
-  "cidade": String (Obrigatório),
-  "uf": String (Obrigatório),
-  "telefone": String,
-  "email": String,
-  "responsavel": String,
-  "obs": String
-}```
+```
+POST /lojas/adicionar 
+Body: {
+    "nome": String (Obrigatório),
+    "matriz": Boolean,
+    "cnpj": String (Obrigatório),
+    "inscrestadual": String,
+    "inscrmunicipal": String,
+    "rua": String (Obrigatório),
+    "numero": Integer (Obrigatório),
+    "bairro": String (Obrigatório),
+    "complemento": String,
+    "cidade": String (Obrigatório),
+    "uf": String (Obrigatório),
+    "telefone": String,
+    "email": String,
+    "responsavel": String,
+    "obs": String
+}
+```
 
 Endpoint para retorno de todas as lojas cadastradas.
-```GET /lojas```
+```
+GET /lojas
+```
 
 Endpoint para o retorno de uma loja em específico.
-```GET /loja/{id}```
+```
+GET /loja/{id}
+```
 
 Endpoint para alteração de uma loja cadastrada.
-```POST /lojas/alterar/{id}```
-```Body: {
+```
+POST /lojas/alterar/{id}
+Body: {
   "nome": String (Obrigatório),
   "matriz": Boolean,
   "cnpj": String (Obrigatório),
@@ -71,10 +78,63 @@ Endpoint para alteração de uma loja cadastrada.
   "email": String,
   "responsavel": String,
   "obs": String
-}```
+}
+```
 
 Endpoint para remoção de uma loja.
-```POST /lojas/remover```
-```Body: {
+```
+POST /lojas/remover
+Body: {
   "id": Integer (Obrigatório)
-}```
+}
+```
+
+Endpoint para cadastrar um novo produto.
+```
+POST /produtos/adicionar 
+Body: {
+  "lojaId": Integer (Obrigatótio),
+  "codigo": Integer (Obrigatótio),
+  "nome": String (Obrigatório),
+  "classificacao": String (Obrigatório),
+  "quantidade": Integer (Obrigatótio),
+  "fabricacao": Date,
+  "validade": Date,
+  "valor": Number (Obrigatório),
+  "obs": String
+}
+```
+
+Endpoint para retorno de todos os produto cadastradas de uma loja.
+```
+GET /produtos/{lojaid}
+```
+
+Endpoint para o retorno de um produto em específico.
+```
+GET /produtos/{id}
+```
+
+Endpoint para alteração de um produto cadastrado.
+```
+POST /produtos/alterar/{id}
+Body: {
+  "lojaId": Integer (Obrigatótio),
+  "codigo": Integer (Obrigatótio),
+  "nome": String (Obrigatório),
+  "classificacao": String (Obrigatório),
+  "quantidade": Integer (Obrigatótio),
+  "fabricacao": Date,
+  "validade": Date,
+  "valor": Number (Obrigatório),
+  "obs": String
+}
+```
+
+Endpoint para remoção de um produto.
+```
+POST /produtos/remover
+Body: {
+  "id": Integer (Obrigatório)
+}
+```
