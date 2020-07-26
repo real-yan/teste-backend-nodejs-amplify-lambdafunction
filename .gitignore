@@ -1,6 +1,1 @@
 /src/node_modules
-/dist
-/amplify.state
-/function-parameters.json
-/parameters.json
-/TesteNodejsAWSFunction-cloudformation-template.json
