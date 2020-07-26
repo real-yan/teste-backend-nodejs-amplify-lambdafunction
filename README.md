@@ -7,7 +7,7 @@ O projeto em si é constituido por uma API Restful Serverless para o cadastro, a
 A instalação do projeto no Lambda Functions e a configuração do API Gateway é realizada através do Amplify CLI.
 Finalizada a configuração, substituir o conteúdo da pasta ```src/``` gerada pelo conteúdo deste repositório.
 Para mais detalhes, seguir a documentação:
-Amplify CLI[https://docs.amplify.aws/cli]
+![Amplify CLI](https://docs.amplify.aws/cli)
 
 Para fins de testes locais poderão ser instaladas as depêndencias dos módulos da aplicação referenciadas no ```package.json``` via ```npm```.
 
