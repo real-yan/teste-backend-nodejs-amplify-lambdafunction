@@ -1,16 +1,14 @@
 {
-  "name": "teste-nodejs-aws",
-  "version": "1.0.0",
-  "description": "Teste Node.js integrado com AWS para o cadastro de lojas e produtos.",
+  "name": "teste-backend-nodejs-amplify-lambdafunction",
+  "version": "2.0.0",
+  "description": "Teste Node.js integrado com AWS Lambda Functions e API GAteway para o cadastro de lojas e produtos.",
   "main": "index.js",
   "dependencies": {
     "aws-serverless-express": "^3.3.5",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "mysql2": "^2.1.0",
-    "sequelize": "^6.3.3",
-    "swagger-jsdoc": "^4.0.0",
-    "swagger-ui-express": "^4.1.4"
+    "sequelize": "^6.3.3"
   },
   "devDependencies": {},
   "scripts": {
@@ -18,16 +16,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/real-yan/teste-nodejs-aws.git"
+    "url": "git+https://github.com/real-yan/teste-backend-nodejs-amplify-lambdafunction.git"
   },
   "keywords": [
     "node",
-    "aws"
+    "aws",
+    "lambda",
+    "api gateway"
   ],
   "author": "Yan Real",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/real-yan/teste-nodejs-aws/issues"
+    "url": "https://github.com/real-yan/teste-backend-nodejs-amplify-lambdafunction/issues"
   },
-  "homepage": "https://github.com/real-yan/teste-nodejs-aws#readme"
+  "homepage": "https://github.com/real-yan/teste-backend-nodejs-amplify-lambdafunction#readme"
 }

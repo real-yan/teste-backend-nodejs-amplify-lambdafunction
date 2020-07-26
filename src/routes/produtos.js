@@ -101,6 +101,11 @@ app.get("/produto/:id", produtos.retornaProduto);
  *  post:
  *      summary: Altera o cadastro de um produto.
  *      parameters:
+ *        - name: id
+ *          in: path
+ *          type: integer
+ *          required: true
+ *          description: ID do produto desejada.
  *        - name: produto
  *          in: body
  *          required: true
@@ -108,8 +113,6 @@ app.get("/produto/:id", produtos.retornaProduto);
  *          schema:
  *              type: object
  *              properties:
- *                  id:
- *                      type: integer
  *                  lojaId:
  *                      type: integer
  *                  codigo:
@@ -129,7 +132,6 @@ app.get("/produto/:id", produtos.retornaProduto);
  *                  obs:
  *                      type: string
  *              required:
- *                - id
  *                - lojaId
  *                - codigo
  *                - nome
@@ -137,7 +139,6 @@ app.get("/produto/:id", produtos.retornaProduto);
  *                - quantidade
  *                - valor
  *              example:
- *                  id: 1
  *                  lojaId: 1
  *                  codigo: 789
  *                  nome: Alpino 200g
@@ -153,7 +154,7 @@ app.get("/produto/:id", produtos.retornaProduto);
  *          '400':
  *              description: Erro inesperado 
  */
-app.post("/produtos/alterar", produtos.atualizaProduto);
+app.post("/produtos/alterar/:id", produtos.atualizaProduto);
 
 /**
  * @swagger

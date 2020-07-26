@@ -1,9 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const swaggerUi = require('swagger-ui-express')
-const swaggerDocs = require('./config/swaggerDocs')
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
-const settings = require('./config/settings')
+const settings = require('./settings')
 const main = require('./routes/main')
 
 /**
@@ -18,15 +16,10 @@ app.use(awsServerlessExpressMiddleware.eventContext())
  * Configuração do CORS
  */
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*")
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
-  next()
+    res.header("Access-Control-Allow-Origin", "*")
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+    next()
 })
-
-/** 
- * Configuração do Swagger 
-*/
-app.use('/api-doc', swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 
 /** 
  * Configuração das Rotas

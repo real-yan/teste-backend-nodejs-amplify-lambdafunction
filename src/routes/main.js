@@ -6,7 +6,7 @@ const produtos = require("./produtos");
  * Rota para a página principal
  */
 app.get("/", (req, res) => {
-    res.redirect("/api-doc");
+    res.redirect("/lojas");
 });
 
 app.use(lojas);

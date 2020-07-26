@@ -22,6 +22,9 @@ const retornaTodasLojas = (req, res) => {
  */
 const retornaLoja = (req, res) => {
     LojaServiceInstance.findById(req.params.id).then((result) => {
+        if(!result) {
+            res.status(404).send("Não foi encontrado nenhum resultado para o ID informado.")    
+        }
         res.status(200).json(result)
     }).catch((error) => {
         console.log(error) 
@@ -65,7 +68,7 @@ const criaNovaLoja = (req, res) => {
  * @param res {express.Response} Objeto de resposta
  */
 const atualizaLoja = (req, res) => {
-    LojaServiceInstance.update(req.params.id, {
+    LojaServiceInstance.update(req.body.id, {
         nome: req.body.nome,
         matriz: req.body.matriz,
         cnpj: req.body.cnpj,

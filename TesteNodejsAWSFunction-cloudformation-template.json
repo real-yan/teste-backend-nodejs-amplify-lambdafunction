@@ -69,7 +69,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "amplify-testenodejsaws-dev-235649-deployment",
-					"S3Key": "amplify-builds/TesteNodejsAWSFunction-634f4c79693762624a42-build.zip"
+					"S3Key": "amplify-builds/TesteNodejsAWSFunction-6578334a39644f683962-build.zip"
 				}
 			}
 		},
