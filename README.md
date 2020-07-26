@@ -24,7 +24,7 @@ node app.js
 
 Por padrão, a execução é realizada na porta ```3000```, mas essa informação pode ser configurada no arquivo ```settings.js```.
 
-## Detalhes
+## Detalhes da API
 A API é disponibilizada atrvés dos seguintes endpoints:
 
 Endpoint para cadastrar uma nova loja.
