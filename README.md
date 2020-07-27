@@ -1,22 +1,24 @@
 # Teste de Backend utilizando Nodejs com Lambda Functions e API Gateways configurados via Amplify
-O intuito deste projeto é o teste das habilidades do profissional em desenvolver o backend de uma aplicação utilizando Node.js em integração com o AWS Lambda Functions, AWS API Gateway e Amazon RDS.
+O intuito desta aplicação é desenvolver uma API REST Serverless via Node.js para integrá-la com o AWS Lambda Functions, AWS API Gateway e Amazon RDS utilizando o serviço Amplify CLI. Para desenvolver a aplicação foi utilizado o framework Express.
 
-O projeto em si é constituido por uma API Restful Serverless para o cadastro, alteração e remoção de lojas e produtos de uma determinada empresa.
+O projeto em si constitui-se por uma aplicação web para o cadastro, alteração e remoção de lojas e produtos de uma determinada empresa.
 
 ## Instalação
-A instalação do projeto no Lambda Functions e a configuração do API Gateway é realizada através do Amplify CLI.
-Finalizada a configuração, substituir o conteúdo da pasta ```src/``` gerada pelo conteúdo deste repositório.
-Para mais detalhes, seguir a documentação:
-[Amplify CLI](https://docs.amplify.aws/cli)
+As configurações dos serviços AWS Lambda Functions e API Gateway são realizadas através do serviço Amplify CLI. Para mais detalhes, seguir a documentação: [Amplify CLI](https://docs.amplify.aws/cli).
+Finalizada a configuração, substituir o conteúdo da pasta ```src/``` gerada pelo conteúdo deste repositório e subir aplicação através do Amplify e a API estará pronta para ser usada.
 
-Para fins de testes locais poderão ser instaladas as depêndencias dos módulos da aplicação referenciadas no ```package.json``` via ```npm```.
+```bash
+amplify push
+```
+
+Para fins de testes locais, poderão ser instaladas as depêndencias dos módulos da aplicação referenciadas no ```package.json``` via ```npm```.
 
 ```bash
 npm install
 ```
 
 ## Execução
-Para executar a aplicação localmente, basta acionar a aplicação encontrada na pasta ```src/```.
+Para executar a aplicação localmente, basta utilizar o Node para rodar o arquivo ```app.js``` encontrado na pasta ```src/```.
 
 ```bash
 node app.js
@@ -32,10 +34,7 @@ Endpoint para cadastrar uma nova loja.
 POST /lojas/adicionar 
 Body: {
     "nome": String (Obrigatório),
-    "matriz": Boolean,
     "cnpj": String (Obrigatório),
-    "inscrestadual": String,
-    "inscrmunicipal": String,
     "rua": String (Obrigatório),
     "numero": Integer (Obrigatório),
     "bairro": String (Obrigatório),
@@ -44,8 +43,7 @@ Body: {
     "uf": String (Obrigatório),
     "telefone": String,
     "email": String,
-    "responsavel": String,
-    "obs": String
+    "responsavel": String
 }
 ```
 
@@ -64,10 +62,7 @@ Endpoint para alteração de uma loja cadastrada.
 POST /lojas/alterar/{id}
 Body: {
   "nome": String (Obrigatório),
-  "matriz": Boolean,
   "cnpj": String (Obrigatório),
-  "inscrestadual": String,
-  "inscrmunicipal": String,
   "rua": String (Obrigatório),
   "numero": Integer (Obrigatório),
   "bairro": String (Obrigatório),
@@ -76,8 +71,7 @@ Body: {
   "uf": String (Obrigatório),
   "telefone": String,
   "email": String,
-  "responsavel": String,
-  "obs": String
+  "responsavel": String
 }
 ```
 
@@ -98,10 +92,7 @@ Body: {
   "nome": String (Obrigatório),
   "classificacao": String (Obrigatório),
   "quantidade": Integer (Obrigatótio),
-  "fabricacao": Date,
-  "validade": Date,
-  "valor": Number (Obrigatório),
-  "obs": String
+  "valor": Number (Obrigatório)
 }
 ```
 
@@ -124,10 +115,7 @@ Body: {
   "nome": String (Obrigatório),
   "classificacao": String (Obrigatório),
   "quantidade": Integer (Obrigatótio),
-  "fabricacao": Date,
-  "validade": Date,
-  "valor": Number (Obrigatório),
-  "obs": String
+  "valor": Number (Obrigatório)
 }
 ```
 
