@@ -46,10 +46,7 @@ const criaNovoProduto = (req, res) => {
         nome: req.body.nome,
         classificacao: req.body.classificacao,
         quantidade: req.body.quantidade,
-        fabricacao: req.body.fabricacao,
-        validade: req.body.validade,
-        valor: req.body.valor,
-        obs: req.body.obs
+        valor: req.body.valor
     }).then((result) => {
         res.status(201).send("Produto salvo com sucesso.")
     }).catch((error) => {
@@ -70,10 +67,7 @@ const atualizaProduto = (req, res) => {
         nome: req.body.nome,
         classificacao: req.body.classificacao,
         quantidade: req.body.quantidade,
-        fabricacao: req.body.fabricacao,
-        validade: req.body.validade,
-        valor: req.body.valor,
-        obs: req.body.obs
+        valor: req.body.valor
     }).then((result) => {
         res.status(200).send("Produto alterado com sucesso com sucesso.")
     }).catch((error) => {
