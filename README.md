@@ -29,7 +29,7 @@ Por padrão, a execução é realizada na porta ```3000```, mas essa informaçã
 ## Detalhes da API
 A API é disponibilizada atrvés dos seguintes endpoints:
 
-URI principal: ```https://xzf0kxerf9.execute-api.us-east-1.amazonaws.com/dev```
+URL principal: ```https://xzf0kxerf9.execute-api.us-east-1.amazonaws.com/dev```
 
 Endpoint para cadastrar uma nova loja.
 ```
