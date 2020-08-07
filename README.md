@@ -1,7 +1,9 @@
 # Teste de Backend utilizando Nodejs com Lambda Functions e API Gateways configurados via Amplify
-O intuito desta aplicação é desenvolver uma API REST Serverless via Node.js para integrá-la com o AWS Lambda Functions, AWS API Gateway e Amazon RDS utilizando o serviço Amplify CLI. Para desenvolver a aplicação foi utilizado o framework Express.
+O intuito desta aplicação é desenvolver uma API REST Serverless via Node.js para integrá-la com o AWS Lambda Functions, AWS API Gateway e Amazon RDS* utilizando o serviço Amplify CLI. Para desenvolver a aplicação foi utilizado o framework Express.
 
 O projeto em si constitui-se por uma aplicação web para o cadastro, alteração e remoção de lojas e produtos de uma determinada empresa.
+
+*Devido às cobranças do AWS por dias de uso da instância do RDS, o banco de dados MySQL foi removido de lá, sendo necessário a utilização local de uma base de dados. Para vinculá-la à aplicação, basta atribuir as informações necessárias no arquivo ```settings.js```.
 
 ## Instalação
 As configurações dos serviços AWS Lambda Functions e API Gateway são realizadas através do serviço Amplify CLI. Para mais detalhes, seguir a documentação: [Amplify CLI](https://docs.amplify.aws/cli).
