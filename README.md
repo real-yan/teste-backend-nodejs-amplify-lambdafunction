@@ -3,7 +3,7 @@ O intuito desta aplicação é desenvolver uma API REST Serverless via Node.js p
 
 O projeto em si constitui-se por uma aplicação web para o cadastro, alteração e remoção de lojas e produtos de uma determinada empresa.
 
-*Devido às cobranças do AWS por dias de uso da instância do RDS, o banco de dados MySQL foi removido de lá, sendo necessário a utilização local de uma base de dados. Para vinculá-la à aplicação, basta atribuir as informações necessárias no arquivo ```settings.js```.
+<i>* Devido às cobranças do AWS por dias de uso da instância do RDS, o banco de dados MySQL foi removido de lá, sendo necessário a utilização local de uma base de dados. Para vinculá-la à aplicação, basta atribuir as informações necessárias no arquivo ```settings.js```.</i>
 
 ## Instalação
 As configurações dos serviços AWS Lambda Functions e API Gateway são realizadas através do serviço Amplify CLI. Para mais detalhes, seguir a documentação: [Amplify CLI](https://docs.amplify.aws/cli).
